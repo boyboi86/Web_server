@@ -1,0 +1,56 @@
+<!-- 
+Source file: twitter.html
+
+---
+Copyright (c) 2012 All Right Reserved, C. A. Cois
+http://www.codehenge.net
+
+THIS CODE AND INFORMATION ARE PROVIDED "AS IS" WITHOUT WARRANTY OF ANY 
+KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND/OR FITNESS FOR A
+PARTICULAR PURPOSE.
+
+Node.js is an official trademark of Joyent. This software is not 
+formally related to or endorsed by the official Joyent Node.js open 
+source or commercial project.
+-->
+
+<html>
+	<head>
+		<title>My Twitter Feed</title>
+	</head>
+	
+	<body>
+		<center>
+		<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+		<script>
+			new TWTR.Widget({
+				version: 2,
+				type: 'profile',
+				rpp: 4,
+				interval: 30000,
+				width: 250,
+				height: 300,
+				theme: {
+					shell: {
+						background: '#8ec1da',
+						color: '#ffffff'
+					},
+					tweets: {
+						background: '#ffffff',
+						color: '#444444',
+						links: '#1985b5'
+					}
+				},  
+				features: {
+					scrollbar: false,
+					loop: false,
+					live: false,
+					behavior: 'all'
+				}
+			}).render().setUser('aaroncois').start();
+		</script>
+		</center>
+	</body>
+	
+</html>
